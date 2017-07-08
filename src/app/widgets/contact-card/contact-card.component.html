@@ -1,0 +1,44 @@
+<div class="panel panel-default">
+  <a type="button" (click)="onDeleteContact()" class="btn pull-right">
+    <span class="glyphicon glyphicon-remove"></span>
+  </a>
+
+  <div class="panel-body">
+    <h5>
+      <span class="glyphicon glyphicon-user"></span>
+      {{ firstName }} {{ lastName }}
+    </h5>
+    <h5>
+      <span class="glyphicon glyphicon-envelope"></span>
+      {{ email }}
+    </h5>
+    <h5>
+      <span class="glyphicon glyphicon-globe"></span>
+      <a [href]="website">{{ website }}</a>
+    </h5>
+  </div>
+
+  <div class="btn-group btn-group-justified">
+    <div class="btn-group">
+
+      <div *ngIf="currentRoute === '/'">
+        <a type="button" [routerLink]="['/contacts', id]" class="btn btn-default btn-block">
+          <span class="glyphicon glyphicon-search"></span>
+        </a>
+      </div>
+      <div *ngIf="currentRoute !== '/'">
+        <a type="button" [routerLink]="['/']" class="btn btn-default btn-block">
+          <span class="glyphicon glyphicon-arrow-left"></span>
+        </a>
+      </div>
+
+    </div><!-- .btn-group -->
+    <div class="btn-group">
+      <a type="button" (click)="toEditForm()" class="btn btn-default btn-block">
+        <span class="glyphicon glyphicon-pencil"></span>
+      </a>
+    </div><!-- .btn-group -->
+  </div><!-- .btn-group .btn-group-justified -->
+</div><!-- .panel .panel-default -->
+
+<!-- routerLink]="['/contacts', id, 'edit']" -->

@@ -1,0 +1,13 @@
+<div *ngIf="contact">
+  <contact-page></contact-page>
+
+  <div class="container">
+    <contact-form title="Edit Contact!"
+                  [firstName]="contact.first_name"
+                  [lastName]="contact.last_name"
+                  [email]="contact.email"
+                  [website]="contact.website"
+                  (submitForm)="onEditForm($event)">
+    </contact-form>
+  </div>
+</div>

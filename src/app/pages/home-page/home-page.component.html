@@ -1,0 +1,11 @@
+<div *ngIf="appComp.contacts">
+  <div class="col-sm-6">
+    <contact-form title="Add A New Contact!"
+                  (submitForm)="handleNewContact($event)">
+    </contact-form>
+  </div>
+
+  <div class="col-sm-6">
+    <contact-list [contacts]="appComp.contacts"></contact-list>
+  </div>
+</div>

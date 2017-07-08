@@ -1,0 +1,6 @@
+<contact-card *ngFor="let contact of contacts"
+              [id]="contact.id"
+              [firstName]="contact.first_name"
+              [lastName]="contact.last_name"
+              [email]="contact.email"
+              [website]="contact.website"></contact-card>
