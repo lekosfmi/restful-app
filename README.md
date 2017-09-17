@@ -1,10 +1,9 @@
 # RestfulApp
 
-A simple demonstration of interaction between Angular with a restful node api.
+A simple resultful API built in Node interacting with Angular.
 
 ## Getting Started
-
-Clone the app by running `git https://github.com/lekosfmi/restful-app`.
+Clone the app by running `git clone https://github.com/lekosfmi/restful-app`.
 After the app has been cloned, go to the root directory of the app,
 and run `npm install .` to install the required dependencies.
 
@@ -12,8 +11,7 @@ and run `npm install .` to install the required dependencies.
 
 While still in the root directory of the app, run `npm start dev`
 then navigate to [http://127.0.0.1:3001/api/contacts](http://127.0.0.1:3001/api/contacts),
-and you should see an array of contact objects in the form of a
-JSON object appear.
+and an array of `Contact` objects should be `GET` successfully.
 
 ## Starting the Angular App
 
